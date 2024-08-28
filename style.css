@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --dark: #19232d;
+  --med: #54687a;
+
+  --light: #dfe1e2;
+  --highlight: #259ae9;
+  --action: #5d7c97;
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  background-color: var(--dark);
+  color: var(--light);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: var(--highlight);
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: var(--action);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+p {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.bold {
+  font-weight: 900;
+}
+
+.underline {
+  text-decoration: underline wavy var(--highlight);
+  text-underline-offset: 0.3em;
+}
+
+.logo {
+  width: 250px;
+  padding: 0 30px 30px 30px;
+}
+
+.logo:hover {
+  scale: 1.2;
+}
+
+.button {
+  width: 240px;
+  height: 100px;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 20px auto;
+  background-color: var(--highlight);
+  cursor: pointer;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover {
+  background-color: var(--action);
+}
+
+.button img {
+  width: 100%;
+  height: auto;
+}
+
+.heart-container {
+  position: absolute;
+  z-index: 2;
+  top: 28%;
+  right: 25%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+
+.heart {
+  background-color: var(--highlight);
+  position: relative;
+  transform: rotate(45deg);
+  display: block;
+}
+
+.heart::before,
+.heart::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: inherit;
+  border-radius: 50%;
+  display: block;
+}
+
+.heart::before {
+  transform: translateY(-50%);
+}
+
+.heart::after {
+  transform: translateX(-50%);
+}
+
+.heart-beat {
+  height: 6vw;
+  width: 6vw;
+  animation: beat 1.4s infinite linear;
+}
+
+.grid-center {
+  display: grid;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.content {
+  padding-top: 20px;
+}
+
+.content p {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+@keyframes beat {
+  0% {
+    transform: rotate(45deg) scale(1);
+  }
+  25% {
+    transform: rotate(45deg) scale(1);
+  }
+  30% {
+    transform: rotate(45deg) scale(1.4);
+  }
+  50% {
+    transform: rotate(45deg) scale(1.2);
+  }
+  70% {
+    transform: rotate(45deg) scale(1.4);
+  }
+  100% {
+    transform: rotate(45deg) scale(1);
+  }
+}
+
