@@ -63,10 +63,6 @@ p {
   padding: 0 30px 30px 30px;
 }
 
-.logo:hover {
-  scale: 1.2;
-}
-
 .button {
   width: 240px;
   height: 100px;
